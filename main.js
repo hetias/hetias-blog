@@ -18,58 +18,36 @@ var blogs_entries = [
 
 const projects_entries = [
     {
-        name: "Deux Code",
+        title: "Deux Code",
         description: "Story about a strange virus appearing throught all computers in the world.",
         file: "projects/deux-code.html",
         show: false,
     },
     {
-        name: "Luna Llena",
+        title: "Luna Llena",
         description: "Game about dealing with a beast.",
         file: "projects/luna-llena.html",
         show: false,
     },
 ];
 
-function append_blog_entries(blogs_section){
-    for(var i = 0; i < blogs_entries.length; i++){
-        if (blogs_entries[i].show == false)
-            continue;
-
-        var entry = document.createElement("li");
-        entry.setAttribute("class", "blog-entry");
-
-        var title = document.createElement("a");
-        title.setAttribute("href", blogs_entries[i].file);
-        title.innerHTML = blogs_entries[i].title;
-        entry.appendChild(title);
-
-        var description = document.createElement("p");
-        description.innerHTML = blogs_entries[i].description
-        entry.appendChild(description);
-
-        blogs_section.appendChild(entry);
-    }
-}
-
-function append_projects_entries(projects_section){
-    for(var i = 0; i < projects_entries.length; i++){
-        if (projects_entries[i].show == false)
+function append_entries_to_section(entries, section){
+    for(var i = 0; i < entries.length; i++){
+        if (entries[i].show == false)
             continue;
         var entry = document.createElement("li");
         entry.setAttribute("class", "blog-entry");
 
         var title = document.createElement("a");
-        title.setAttribute("href", projects_entries[i].file);
-        title.innerHTML = projects_entries[i].name;
+        title.setAttribute("href", entries[i].file);
+        title.innerHTML = entries[i].title;
         entry.appendChild(title);
 
         var description = document.createElement("p");
-        description.innerHTML = projects_entries[i].description;
+        description.innerHTML = entries[i].description;
         entry.appendChild(description);
 
-
-        projects_section.appendChild(entry);
+        section.appendChild(entry);
     }
 }
 
@@ -78,8 +56,8 @@ function main(){
     var blogs_section = document.getElementById("blogs");
     var projects_section = document.getElementById("other-projects");
 
-    append_blog_entries(blogs_section);
-    append_projects_entries(projects_section);
+    append_entries_to_section(blogs_entries, blogs_section);
+    append_entries_to_section(projects_entries, projects_section);
 }
 
 main();
