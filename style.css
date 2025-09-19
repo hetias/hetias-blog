@@ -1,0 +1,125 @@
+:root {
+    --midnight-blue: #03045E;
+    --usafa: #014F86;
+    --blue-silk: #D0DCE8;
+    --blue-lips: #A6BCE2;
+    --blasphemous-blue: #3356AA;
+    --blue-haze: #BDBACE;
+    --bluetiful: #3C69E7;
+    --dancing-sea: #1C4D8F;
+    --fibonacci-blue: #112358;
+    --parmessano: #FDE992;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    font-family: "Titillium Web", serif;
+}
+
+body{
+    background-color: var(--fibonacci-blue);
+    color: var(--blue-silk);
+    padding: 0px;
+    margin: 0px;
+}
+
+#hetias-header{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#hetias-header a{
+    color: var(--bluetiful);
+    transition: 0.5s;
+}
+
+#hetias-header a:hover{
+    color: var(--parmessano);
+}
+
+#about{
+    color: var(--blue-lips);
+    padding: 0px;
+    margin: 0px auto 50px auto;
+    width: 45%;
+}
+
+#about h2{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#about p{
+    padding: 0px;
+    margin: 0px;
+}
+
+#main{
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#blogs{
+    margin: 0px;
+    background-color:  var(--dancing-sea);
+    height: auto;
+}
+
+#blog-content{
+    padding: 0px;
+    margin: auto;
+    width: 75%;
+    margin-top: 5rem;
+}
+
+#blog-header{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+#other-projects{
+    margin: 0px;
+    background-color: var(--dancing-sea);
+}
+
+.subtitle{
+    text-decoration: underline;
+}
+
+.link{
+    color: var(--parmessano);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.blog-entry{
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.blog-entry a{
+    color: var(--blue-lips);
+    transition: 0.5s;
+}
+
+.blog-entry a:hover{
+    color: var(--blue-silk);
+    text-decoration: underline;
+}
+
+.blog-entry p {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.blog-p{
+    font-size: 1.5rem;
+}
+
